@@ -1,0 +1,32 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html{
+	height: 100vh;
+}
+
+@import './components/color_variables';
+@import '../libs/bootstrap';
+@import './components/common-styles';
+@import './layouts/login';
+
+.side-panel{
+	background: $black;
+	flex:2;
+}
+.content-area-div{
+	background: $white;
+	flex:8;
+}
+
+.wrapper-inner-div{
+	display: flex;
+	flex-direction:row;
+	height: 100vh;
+	.top-bar{
+		height: 60px;
+		display: flex;
+		background: #eee;
+	}
+}

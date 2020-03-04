@@ -1,0 +1,14 @@
+input,button,a{
+	outline: none;
+	&:focus{
+		outline: none;
+	}
+}
+
+a{
+	color: $main_color !important;
+}
+
+button{
+	border: none;
+}

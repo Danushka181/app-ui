@@ -7,7 +7,6 @@ const gulp = require("gulp");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
-const imagemin = require('gulp-imagemin');
 
 // BrowserSync
 function browserSync(done) {
@@ -59,7 +58,7 @@ function browserSyncReload(done) {
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./assets/sass/**/*", gulp.series(css, browserSyncReload, imgMin) )
+  gulp.watch("./assets/sass/**/*", gulp.series(css, browserSyncReload) )
   gulp.watch("./**/*.html", gulp.series( browserSyncReload) )
 }
 
