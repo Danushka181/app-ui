@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>App Dashbord</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+	<div class="wrapper-div">
+		<div class="wrapper-inner-div">
+			<div class="side-panel">
+				
+			</div>
+			<div class="content-area-div">
+				<div class="top-bar">
+					
+				</div>
+
+				<div class="main-area">
+					<div class="content-div">
+						<div class="man-heading">
+							<h1 class="main-heading">Customize App Data</h1>
+							<span class="sup-head">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+						</div>
+						<div class="form-gp">
+							<label for="app_name">App Name</label>
+							<input type="text" class="app-name-elm" id="app_name">
+							<div class="text-danger"></div>
+						</div>
+						<div class="upload-area">
+							<div class="app-icon">
+								<span class="images-label">App Icon</span>
+								<div class="app-icon-show" style="background-image: url(https://via.placeholder.com/450);"></div>
+								<input type="file" id="icon_uloader">
+								<label for="icon_uloader" class="file-uploader">Browse</label>
+							</div>
+							<div class="app-icon">
+								<span class="images-label">App Spash Icon</span>
+								<div class="app-icon-show" style="background-image: url(https://via.placeholder.com/450);"></div>
+								<input type="file" id="splash_uloader">
+								<label for="splash_uloader" class="file-uploader">Browse</label>
+							</div>
+						</div>
+						<span class="images-label">App Colors</span>
+						<div class="color-picker">
+							<div class="single-picker">
+								<div class="form-gp">
+									<div class="color-box"></div>
+									<label for="color1">BG Color</label>
+									<input type="text" class="app-name-elm" id="color1">
+									<div class="text-danger"></div>
+								</div>
+							</div>
+							<div class="single-picker">
+								<div class="form-gp">
+									<div class="color-box" style="background-color: red"></div>
+									<label for="color2">Bar Tint Color</label>
+									<input type="text" class="app-name-elm" id="color2" style="border-bottom: 1px solid red;">
+									<div class="text-danger"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>	
+	<!-- Js Links here -->
+
+	<!-- google fonts -->
+	<script>
+		WebFontConfig = {
+			google: { families: ['Lato:400,700','Poppins:400,500,600'] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})(); </script>
+		<script src="./assets/js/jquery.min.js"></script>
+		<script src="./assets/js/bootstrap.js"></script>
+		<script src="./assets/js/scripts.js"></script>
+	</body>
+	</html>
