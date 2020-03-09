@@ -1,14 +1,333 @@
 input,button,a{
 	outline: none;
+	font-family: $poppins;
 	&:focus{
 		outline: none;
 	}
 }
+input{
+	background: none;	
+}
 
 a{
-	color: $main_color !important;
+	color: $main_color;
 }
 
 button{
 	border: none;
+}
+label{
+	font-family: $lato;
+	max-width: 400px;
+}
+
+
+.content-div{
+	padding: 15px;
+	position: relative;
+	overflow: hidden;
+	min-height: calc(100vh - 60px);
+	z-index: 5;
+	
+	.man-heading{
+		margin-bottom: 30px;
+	}
+	h1.main-heading{
+		color: $main_color;
+		font-size: 24.47px;
+		font-family: $lato;
+		font-weight: bold;
+		line-height: 1.186;
+		text-align: left;
+		margin-bottom: 0;
+	}
+	span.sup-head{
+		font-size: 14.47px;
+		font-family: $lato;
+		color: rgba( 82, 81, 81, 0.569 );
+		line-height: 2.005;
+		text-align: left;
+	}
+	.panel-group{
+		position: relative;
+		z-index: 5;
+		.panel {
+			margin-top: 0;
+			border:none;
+			&:last-child{
+				.panel-heading{
+					a{
+						border-bottom: 1px solid $col1;
+					}
+				}
+			}
+			.panel-heading{
+				padding: 0px;
+				border-radius: 0px;
+				background: $white;
+				a{
+					display: flex;
+					border: 1px solid $col1;
+					padding: 0px 15px 0px 40px;
+					border-bottom: none;
+					text-decoration: none;
+					position: relative;
+					font-family: $lato;
+					font-size: 18px;
+					height: 80px;
+					align-items:center;
+					color: #797979;
+					font-weight: 600;
+					flex-wrap: wrap;
+					padding: 16px 40px 20px;
+					border-bottom: 1px transparent;
+					@include transition( all .4s ease-in-out);
+					span{
+						width: 100%;
+						font-size: 13px;
+						display: none;
+						font-family: $poppins;
+						font-weight: 400;
+						top: 2px;
+					}
+					.down-arrow{
+						display: block;
+						width: 21px;
+						height: 12px;
+						position: absolute;
+						background-image: url(../images/down.png);
+						right: 30px;
+						@include transition(all .4s ease-in-out);
+						@include transform(rotate(180deg));
+						background-size: cover;
+						opacity: .7;
+					}
+					&:before{
+						content: '';
+						width: 0;
+						height: 0px;
+						top: 0px;
+						bottom: 0;
+						margin-top: auto;
+						margin-bottom: auto;
+						position: absolute;
+						left: 0;
+						background: $main_color;
+						transition-delay:.3s;
+						@include transition( all .3s ease-in-out);
+					}
+					&[aria-expanded="true"]{
+						height: 80px;
+						border: 1px solid $main_color;
+						border-bottom: 1px solid $main_color;
+						color: $main_color;
+						line-height: 1.2;
+						pointer-events: none;
+						&:before{
+							width: 10px;
+							height: 60px;
+						}
+						span{
+							opacity: 1;
+							position: relative;
+							display: block;
+						}
+						.down-arrow{
+							@include transform(rotate(0deg));
+							background-image: url(../images/down-red.png);
+						}
+					}
+				}
+			}
+			.panel-body{
+				background: #fafafa;
+				padding: 30px 15px;
+				.form-gp{
+					label{
+						font-size: 15px;
+						font-family: $lato;
+						font-weight: 400;
+					}
+					input{
+						background: none;
+						border-bottom: 1px solid #c3c3c3;
+						max-width: 400px;
+					}
+				}
+				p{
+					font-family: $poppins;
+					font-size: 14px;
+					color: rgba(82, 81, 81, 0.7);
+					font-weight: 400;
+				}
+
+				.icons-wrapepr{
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					.item{
+						width: 50%;
+						justify-content: center;
+						align-items: center;
+						display: flex;
+						flex-direction: column;
+						padding: 10px;
+						cursor: pointer;
+						@include transition( all .4s ease);
+						border: 1px solid transparent;
+						img{
+							max-width: 100px;
+						}
+						h3{
+							font-size: 14px;
+							font-family: $lato;
+							color: rgb( 92, 89, 89 );
+							font-weight: bold;
+							line-height: 2.418;
+							text-transform: uppercase;	
+							margin: 0;
+						}
+						&:hover,&.active{
+							background: rgba($main_color, .1);
+							border: 1px solid rgba( $col1, .8);
+						}
+					}
+
+				}
+			}
+		}
+	}
+	
+	.images-label{
+		font-weight: 400;
+		font-size: 18px;
+		font-family: $lato;
+		display: block;
+		margin-bottom: 15px;
+		color: #535353;
+	}
+	.upload-area{
+		.app-icon{
+			max-width: 300px;
+			margin-bottom: 40px;
+			
+			.app-icon-show{
+				display: flex;
+				height: 400px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			input{
+				position: absolute;
+				pointer-events:none;
+				visibility: hidden;
+			}
+			label{
+				height: 40px;
+				background: $main_color;
+				border-radius: 4px;
+				color: $white;
+				min-width: 200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 15px;
+				text-transform: uppercase;
+				font-size: 15px;
+				font-family: $lato;
+			}
+		}
+	}
+
+	.color-picker{
+		margin-top: 20px;
+		.single-picker{
+			.color-box{
+				width: 30px;
+				height: 30px;
+				background-color: #eee;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.form-gp{
+				padding-left: 40px;
+			}
+			input{
+				max-width: 200px;
+			}
+			label{
+				margin-left: 40px;
+			}
+		}
+	}
+}
+
+
+@media only screen and (min-width: $ipad ) {
+	.content-div{
+		.panel-group{
+			.panel{
+				.panel-body{
+					.icons-wrapepr{
+						.item{
+							width: 25%;
+							img{
+								max-width: 80px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.form-gp{
+			.app-name-elm{
+				max-width: 400px;
+			}
+		}
+
+		.upload-area{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			margin-top: 30px;
+			.app-icon{
+				width: calc(50% - 20px);
+				&:first-child{
+					margin-right: 30px;
+				}
+			}
+		}
+
+		.color-picker{
+			flex-direction: row;
+			display: flex;
+			.single-picker{
+				width: calc(50% - 20px);
+				max-width: 300px;
+				&:first-child{
+					margin-right: 30px;
+				}
+			}
+	}
+	}
+}
+
+@media only screen and (min-width: $tab ) {
+	.content-div{
+		.panel-group{
+			.panel{
+				.panel-body{
+					.icons-wrapepr{
+						.item{
+							width: 33.333%;
+							img{
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
