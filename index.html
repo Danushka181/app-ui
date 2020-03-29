@@ -22,16 +22,20 @@
 							<h1 class="main-heading">Customize App Data</h1>
 							<span class="sup-head">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 						</div>
-						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-							<div class="panel panel-default">
-								<div class="panel-heading" role="tab" id="headingOne">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-										App Information 
-										<span>Please enter app name for future use</span>
-										<i class="down-arrow"></i>
-									</a>
+						
+						<div id="accordion" class="panel-group">
+							<div class="card panel">
+								<div class="card-header panel-heading" id="headingOne">
+									<h5 class="mb-0">
+										<a href="#" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											App Category 
+											<span class="text-left">please select a category as a app category</span>
+											<i class="down-arrow"></i>
+										</a>
+									</h5>
 								</div>
-								<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
+
+								<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 									<div class="panel-body">
 										<div class="form-gp">
 				                            <label for="app_name">App Name</label>
@@ -39,18 +43,21 @@
 				                            <div class="text-danger"></div>
 				                        </div>
 				                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-									</div>
+									</div>	
 								</div>
 							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading" role="tab" id="headingTwo">
-									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										App Category 
-										<span>please select a category as a app category</span>
-										<i class="down-arrow"></i>
-									</a>
+
+							<div class="card panel">
+								<div class="card-header panel-heading" id="headingTwo">
+									<h5 class="mb-0">
+										<a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											App Category 
+											<span class="text-left">please select a category as a app category</span>
+											<i class="down-arrow"></i>
+										</a>
+									</h5>
 								</div>
-								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false" style="height: 0px;">
+								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 									<div class="panel-body">
 										<div class="icons-wrapepr">
 											<div class="item">
@@ -81,21 +88,25 @@
 									</div>
 								</div>
 							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading" role="tab" id="headingThree">
-									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										App Theme
-										<span>Please select a theme or cusomize </span> 
-										<i class="down-arrow"></i>
-									</a>
+
+							<div class="card panel">
+								<div class="card-header panel-heading" id="headingThree">
+									<h5 class="mb-0">
+										<a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											App Theme
+											<span class="text-left">Please select a theme or cusomize </span> 
+											<i class="down-arrow"></i>
+										</a>
+									</h5>
 								</div>
-								<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+								<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 									<div class="panel-body">
 										Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 									</div>
 								</div>
 							</div>
 						</div>
+						
 					</div>
 					<div class="emulator-div">
 						<img src="assets/images/phone.png" alt="">

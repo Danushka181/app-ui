@@ -39,6 +39,9 @@
 .login-form-body {
     padding: 50px;
 }
+.custom-checkbox .custom-control-label::before{
+    top: 2px;
+}
 .form-gp {
     margin-bottom: 25px;
     position: relative;
